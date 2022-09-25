@@ -25,7 +25,10 @@ import BalanceDeActivos from "../../infra/components/Dashboard/BalanceDeActivos/
 import Soporte from "../../infra/components/Dashboard/Soporte";
 import FirstPanel from "../../infra/components/Dashboard/FirstPanel";
 import ContactUs from "../../infra/components/ContactUs/ContactUs";
-import Guides from "../../infra/components/Guides/Guides";
+import Guides from "../../infra/components/Guides/atom/Guides";
+import GTrade from "../../infra/components/Guides/atom/GTrade";
+import GDeposito from "../../infra/components/Guides/atom/GDeposito";
+import GWallet from "../../infra/components/Guides/atom/GWallet";
 
 
 function App() {
@@ -58,7 +61,11 @@ function App() {
 			
 			<Route path="/TeamCards" element={<TeamCards />} />
 			<Route path="/ContactUs" element={<ContactUs />} />
-			<Route path="/Guides" element={<Guides />} />
+			<Route path="/Guides" element={<Guides />}>
+				<Route path="gtrade" element={<GTrade />}/>
+				<Route path="gdeposito" element={<GDeposito />}/>
+				<Route path="gwallet" element={<GWallet />}/>
+			</Route>
 		</Routes>
     </>
   );

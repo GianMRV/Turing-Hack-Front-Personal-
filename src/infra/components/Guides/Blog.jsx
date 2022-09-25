@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import GTrade from "./atom/GTrade";
 
 const trade = {
     url: 'https://i.pinimg.com/564x/96/40/d3/9640d3f7529fcd5ae5778591aabda45a.jpg'
@@ -11,16 +12,19 @@ const wallet = {
     url: 'https://www.business2community.com/es/wp-content/uploads/sites/5/2022/04/Mejores-Bitcoin-wallets-en-2022-monederos-de-BTC-comparados-hoy.jpeg'
 }
 
-function Guides(){
+function Blog(){
     return(
-        <>
-            <Heading></Heading>
+        <Flex
+            direction={'column'}
+            bg={'#F0F0F0'}
+            pt={10}>
+            <Heading textAlign={'center'}>¿Cómo accionar dentro de la plataforma?</Heading>
             <Flex
                 direction={{ base: 'column', md: 'row' }}
                 px={10}
                 py={10}
-                gap={2}>
-                <Link to='/signin'>
+                gap={4}>
+                <Link to='/guides/GTrade'>
                     <Box
                         _hover={{
                             shadow: 'outline',
@@ -39,7 +43,7 @@ function Guides(){
                         </Box>
                     </Box>
                 </Link>
-                <Link to='/login'>
+                <Link to='/guides/GDeposito'>
                     <Box
                         _hover={{
                             shadow: 'outline',
@@ -58,7 +62,7 @@ function Guides(){
                         </Box>
                     </Box>
                 </Link>
-                <Link to='/recover'>
+                <Link to='/guides/GWallet'>
                     <Box
                         _hover={{
                             shadow: 'outline',
@@ -78,9 +82,9 @@ function Guides(){
                     </Box>
                 </Link>
             </Flex>
-        </>
+        </Flex>
     )
 }
 
 
-export default Guides;
+export default Blog;
