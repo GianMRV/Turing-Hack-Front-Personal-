@@ -18,7 +18,7 @@ function ContactUs(){
                 direction={{ base: 'column', md: 'row'}}
                 alignItems={'center'}
                 justifyContent={'center'}
-                gap={10}>
+                gap={{ base: '1', md: '10'}}>
                 <Flex
                     py={10}
                     px={5}
